@@ -121,16 +121,5 @@
       "description": "As if touched by a quiet enchantment, this curation draws you in without a word. Pink oriental lilies, white disbuds, sweet avalanche roses, aqua pink roses, and pink spray carnations bloom alongside mini gerberas in pink and yellow, golden yellow roses, purple limonium, and eucalyptus. Set in a cane basket, it's a flourish of colour and character, blooming with a touch of quiet magic."
     }
   ],
-  "cart": [
-    {
-      "id": "10",
-      "title": "Lavender Daydream",
-      "price": "3045",
-      "category": "",
-      "description": "Bathed in golden light and soft floral hues, this elegant combo blends beauty, fragrance, and indulgence. A radiant bouquet of deep purple roses, bright yellow lilies, purple limonium, and eucalyptus is wrapped in dreamy blue and adorned with a pearl-edged net ribbon and a delicate pink butterfly. Paired with it is a thoughtful gift box of bergamot and southern magnolia essential oils for diffusers or potpourri. Completing the set is a striking blue cake, baked to order and 100% eggless, finished with golden pearls, frosting swirls, and chocolate drip, perfect for special occasions.",
-      "img": "https://cdnnew.interflora.in/f_auto,q_auto,t_pnopt7prodlp/products/p-lavender-daydream-385440-m.jpg",
-      "quantity": 1,
-      "message": "from carddetails"
-    }
-  ]
+  "cart": []
 }

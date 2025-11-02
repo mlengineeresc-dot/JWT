@@ -15,105 +15,111 @@ export const fetchCartProducts = createAsyncThunk(
 );
 
 export const addCart = createAsyncThunk("cart/addCart", async (product) => {
-  console.log("id received at cart", product);
-  const response = await api.post("/", product);
-  // console.log("product response",response);
+  const { data: existingItems } = await api.get("/");
 
+  const found = existingItems.find(
+    (item) => Number(item.originalId) === Number(product.id)
+  );
+
+  if (found) {
+    const updated = {
+      ...found,
+      quantity: (found.quantity || 1) + 1,
+      totalPrice: Number(((found.quantity || 1) + 1) * found.price).toFixed(2),
+    };
+    await api.patch(`/${found.id}`, updated);
+    return updated;
+  }
+
+  const newItem = {
+    ...product,
+    originalId: product.id,
+    quantity: 1,
+    totalPrice: Number(product.price).toFixed(2),
+  };
+
+  const response = await api.post("/", newItem);
   return response.data;
 });
+
+export const removeCartItem = createAsyncThunk(
+  "cart/removeCartItem",
+  async (id) => {
+    await api.delete(`/${id}`);
+    return id; 
+  }
+);
+
+export const clearCartAsync = createAsyncThunk(
+  "cart/clearCartAsync",
+  async () => {
+    const { data: existingItems } = await api.get("/");
+
+    await Promise.all(existingItems.map((item) => api.delete(`/${item.id}`)));
+
+    return [];
+  }
+);
 
 const cartSlice = createSlice({
   name: "cart",
   initialState: {
     cart: [],
-    count: 0,
     loading: false,
     error: null,
-    items: [],
   },
   reducers: {
-    addToCart(state, action) {
-      // payload: product object at least { id, title, price }
-      const incoming = action.payload;
-      // ensure price is a number
-      const price =
-        typeof incoming.price === "string"
-          ? parseFloat(incoming.price)
-          : Number(incoming.price);
-      //   const existing = state.items.find((it) => it.id === incoming.id);
-      const existing = state.cart.find(
-        (it) => Number(it.id) === Number(incoming.id)
-      );
-
-      if (existing) {
-        existing.quantity += 1;
-        existing.totalPrice = Number(
-          (existing.quantity * existing.price).toFixed(2)
-        );
-      } else {
-        state.cart.push({
-          id: incoming.id,
-          title: incoming.title ?? incoming.name,
-          price: Number(isNaN(price) ? 0 : price),
-          quantity: 1,
-          totalPrice: Number((isNaN(price) ? 0 : price).toFixed(2)),
-        });
-      }
+    clearCart(state) {
+      state.cart = [];
     },
   },
   extraReducers: (builder) => {
     builder
-      .addCase(fetchCartProducts.pending, (state, action) => {
+      .addCase(fetchCartProducts.pending, (state) => {
         state.loading = true;
       })
       .addCase(fetchCartProducts.fulfilled, (state, action) => {
         state.cart = action.payload;
-        // console.log("id at state.cart", state.cart);
-
         state.loading = false;
       })
       .addCase(fetchCartProducts.rejected, (state, action) => {
         state.loading = false;
         state.error = action.error.message;
       })
-      .addCase(addCart.pending, (state, action) => {
+      .addCase(addCart.pending, (state) => {
         state.loading = true;
       })
       .addCase(addCart.fulfilled, (state, action) => {
-       const incoming = action.payload;
-       // ensure price is a number
-       const price =
-         typeof incoming.price === "string"
-           ? parseFloat(incoming.price)
-           : Number(incoming.price);
-       //   const existing = state.items.find((it) => it.id === incoming.id);
-       const existing = state.cart.find(
-         (it) => Number(it.id) === Number(incoming.id)
-       );
-
-       if (existing) {
-         existing.quantity += 1;
-         existing.totalPrice = Number(
-           (existing.quantity * existing.price).toFixed(2)
-         );
-       } else {
-         state.cart.push({
-           id: incoming.id,
-           title: incoming.title ?? incoming.name,
-           price: Number(isNaN(price) ? 0 : price),
-           quantity: 1,
-           totalPrice: Number((isNaN(price) ? 0 : price).toFixed(2)),
-         });
-       }
-
         state.loading = false;
+        const incoming = action.payload;
+
+        const existingIndex = state.cart.findIndex(
+          (it) =>
+            Number(it.id) === Number(incoming.id) ||
+            Number(it.originalId) === Number(incoming.originalId)
+        );
+
+        if (existingIndex !== -1) {
+          state.cart[existingIndex] = incoming;
+        } else {
+          // Add new item
+          state.cart.push(incoming);
+        }
       })
       .addCase(addCart.rejected, (state, action) => {
         state.loading = false;
         state.error = action.error.message;
+      })
+      .addCase(removeCartItem.fulfilled, (state, action) => {
+        state.cart = state.cart.filter(
+          (item) => Number(item.id) !== Number(action.payload)
+        );
+      })
+      .addCase(clearCartAsync.fulfilled, (state) => {
+        state.cart = [];
       });
   },
 });
 
 export default cartSlice.reducer;
-export const { addToCart } = cartSlice.actions;
+export const { clearCart } = cartSlice.actions;
