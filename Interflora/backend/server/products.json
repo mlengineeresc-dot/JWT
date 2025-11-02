@@ -1,0 +1,136 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "title": "Blooming Blue Birthday",
+      "price": "3045",
+      "category": "",
+      "description": "Bathed in golden light and soft floral hues, this elegant combo blends beauty, fragrance, and indulgence. A radiant bouquet of deep purple roses, bright yellow lilies, purple limonium, and eucalyptus is wrapped in dreamy blue and adorned with a pearl-edged net ribbon and a delicate pink butterfly. Paired with it is a thoughtful gift box of bergamot and southern magnolia essential oils for diffusers or potpourri. Completing the set is a striking blue cake, baked to order and 100% eggless, finished with golden pearls, frosting swirls, and chocolate drip, perfect for special occasions.",
+      "img": "https://cdnnew.interflora.in/f_auto,q_auto,t_pnopt7prodlp/products/p-blooming-blue-birthday-424855-m.jpg"
+    },
+    {
+      "id": "2",
+      "title": "Lavender Daydream",
+      "price": "3045",
+      "category": "",
+      "description": "In a dreamy haze of lavender skies and blushing petals, Lavender Daydream captures the soft serenity of a dawn garden. Sweet Avalanche roses, mauve chrysanthemums, white orchids, lisianthus, and purple statice bloom in harmony, accented by lush sprigs of springery. Set in a purple box, this arrangement offers a divine escape for those who cherish quiet beauty.",
+      "img": "https://cdnnew.interflora.in/f_auto,q_auto,t_pnopt7prodlp/products/p-lavender-daydream-385440-m.jpg"
+    },
+    {
+      "title": "Lavender Cheers",
+      "price": 26,
+      "category": "",
+      "img": "https://cdnnew.interflora.in/f_auto,q_auto,t_pnopt7prodlp/products/p-lavender-cheers-424856-m.jpg",
+      "description": "A symphony of grace and indulgence, this combo enchants the senses with beauty and taste. A bouquet of sweet avalanche roses, purple lisianthus, and limonium, wrapped in lavender and tied with off-white lace, rests elegantly in an Interflora bag. Paired with it is a stunning purple-hued cake, baked to order and 100% eggless, adorned with delicate floral frosting. Available in multiple flavours, each moist, luscious slice is a celebration of joy, making this gift perfect for birthdays, anniversaries, or any moment worth cherishing.",
+      "id": "3"
+    },
+    {
+      "id": "4",
+      "title": "Mauve Memoir",
+      "price": "2195",
+      "category": "",
+      "description": "Mauve Memoir is an elegant composition of soft mauve chrysanthemums and ruffled purple and white shaded carnations, gathered in cloud-soft layers of blush pink tissue and black frosted wrap. Finished with a white pearl-edged ribbon bow, it is a graceful arrangement that speaks in hushed tones, like a memory held gently in bloom.",
+      "img": "https://cdnnew.interflora.in/f_auto,q_auto,t_pnopt7prodlp/products/p-mauve-memoir-412293-m.jpg"
+    },
+    {
+      "id": "5",
+      "title": "Yellow Mellow Sunshine Bouquet",
+      "price": "2295",
+      "category": "",
+      "description": "Dazzling amidst nature, bursting through life - this arrangement of sunflowers, statice, and solidago has the picaresque twilight hue to display. Send a lively 'Surprise' with this premium floral arrangement.",
+      "img": "https://cdnnew.interflora.in/f_auto,q_auto,t_pnopt7prodlp/products/p-yellow-mellow-sunshine-bouquet-132990-m.jpg"
+    },
+    {
+      "id": "7",
+      "title": "Amethyst Dream",
+      "price": "2445",
+      "category": "",
+      "description": "Like a dream cast in amethyst tones, this arrangement brings together plush purple roses, delicate lisianthus, dried scabiosa, soft daisy blooms, eucalyptus, and wisps of springery. Set in a lilac coupe vase, it is an expression of calm beauty, where every bloom feels carefully chosen from a world just beyond reach.",
+      "img": "https://cdnnew.interflora.in/f_auto,q_auto,t_pnopt7prodlp/products/p-amethyst-dream-240884-m.jpg"
+    },
+    {
+      "id": "10",
+      "title": "Lavender Daydream",
+      "price": "3045",
+      "category": "",
+      "description": "Bathed in golden light and soft floral hues, this elegant combo blends beauty, fragrance, and indulgence. A radiant bouquet of deep purple roses, bright yellow lilies, purple limonium, and eucalyptus is wrapped in dreamy blue and adorned with a pearl-edged net ribbon and a delicate pink butterfly. Paired with it is a thoughtful gift box of bergamot and southern magnolia essential oils for diffusers or potpourri. Completing the set is a striking blue cake, baked to order and 100% eggless, finished with golden pearls, frosting swirls, and chocolate drip, perfect for special occasions.",
+      "img": "https://cdnnew.interflora.in/f_auto,q_auto,t_pnopt7prodlp/products/p-lavender-daydream-385440-m.jpg"
+    },
+    {
+      "id": "11",
+      "title": "A Walk in the Garden Basket",
+      "price": "2345",
+      "category": "",
+      "description": "Glorious, luxurious yet humble - Lilac Roses, Saintiny Pink/White, Mauve Limonium and Leather Fern have the old Eden Garden charm. Take a leap of faith in the hues of this royal hamper in English Garden Basket complemented with white stones.",
+      "img": "https://cdnnew.interflora.in/f_auto,q_auto,t_pnopt7prodlp/products/p-a-walk-in-the-garden-basket-132899-m.jpg"
+    },
+    {
+      "id": "12",
+      "title": "Mauve Memoir",
+      "price": "2195",
+      "category": "",
+      "description": "",
+      "img": "https://cdnnew.interflora.in/f_auto,q_auto,t_pnopt7prodlp/products/p-mauve-memoir-412293-m.jpg"
+    },
+    {
+      "id": "14",
+      "title": "Countryside Memories",
+      "price": "4245",
+      "category": "",
+      "description": "",
+      "img": "https://cdnnew.interflora.in/f_auto,q_auto,t_pnopt7prodlp/products/p-countryside-memories-407524-m.jpg"
+    },
+    {
+      "id": "fc90",
+      "title": "My Forever Favourite",
+      "price": "1495",
+      "category": "",
+      "img": "https://cdnnew.interflora.in/f_auto,q_auto,t_pnopt7prodlp/products/p-my-forever-favourite-412297-m.jpg",
+      "description": "My Forever Favourite is a tender gesture wrapped in warmth and grace. Pink santinis in a soft, gentle hue are gathered with care and wrapped in rustic brown paper that carries a sense of comfort. An off-white lace ribbon finishes the bouquet with a touch of timeless charm. Thoughtfully composed and full of quiet feeling, it is a small creation that holds something truly lasting."
+    },
+    {
+      "id": "13",
+      "title": "Yellow Mellow Sunshine Bouquet",
+      "price": "2295",
+      "category": "",
+      "description": "",
+      "img": "https://cdnnew.interflora.in/f_auto,q_auto,t_pnopt7prodlp/products/p-yellow-mellow-sunshine-bouquet-132990-m.jpg"
+    },
+    {
+      "id": "14",
+      "title": "Countryside Memories",
+      "price": "4245",
+      "category": "",
+      "description": "",
+      "img": "https://cdnnew.interflora.in/f_auto,q_auto,t_pnopt7prodlp/products/p-countryside-memories-407524-m.jpg"
+    },
+    {
+      "id": "15",
+      "title": "Amethyst Dream",
+      "price": "2445",
+      "category": "",
+      "description": "",
+      "img": "https://cdnnew.interflora.in/f_auto,q_auto,t_pnopt7prodlp/products/p-amethyst-dream-240884-m.jpg"
+    },
+    {
+      "id": "1641",
+      "title": "Under Your Spell",
+      "price": 5295,
+      "category": "",
+      "img": "https://cdnnew.interflora.in/f_auto,q_auto,t_pnopt12prodlp/products/p-under-your-spell-412296-m.jpg",
+      "description": "As if touched by a quiet enchantment, this curation draws you in without a word. Pink oriental lilies, white disbuds, sweet avalanche roses, aqua pink roses, and pink spray carnations bloom alongside mini gerberas in pink and yellow, golden yellow roses, purple limonium, and eucalyptus. Set in a cane basket, it's a flourish of colour and character, blooming with a touch of quiet magic."
+    }
+  ],
+  "cart": [
+    {
+      "id": "10",
+      "title": "Lavender Daydream",
+      "price": "3045",
+      "category": "",
+      "description": "Bathed in golden light and soft floral hues, this elegant combo blends beauty, fragrance, and indulgence. A radiant bouquet of deep purple roses, bright yellow lilies, purple limonium, and eucalyptus is wrapped in dreamy blue and adorned with a pearl-edged net ribbon and a delicate pink butterfly. Paired with it is a thoughtful gift box of bergamot and southern magnolia essential oils for diffusers or potpourri. Completing the set is a striking blue cake, baked to order and 100% eggless, finished with golden pearls, frosting swirls, and chocolate drip, perfect for special occasions.",
+      "img": "https://cdnnew.interflora.in/f_auto,q_auto,t_pnopt7prodlp/products/p-lavender-daydream-385440-m.jpg",
+      "quantity": 1,
+      "message": "from carddetails"
+    }
+  ]
+}
