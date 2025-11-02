@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 import { fetchProduct } from "../../featureSlice/ProductReducer";
 import { useDispatch, useSelector } from "react-redux";
 import Button from "../ui/Button";
@@ -7,21 +7,62 @@ import { addCart } from "../../featureSlice/CartReducer";
 
 const Card = () => {
   const product = useSelector((state) => state.product);
-  
-  
+  const searchQuery = useSelector((state) => state.search.query);
   const dispatch = useDispatch();
   const [currentPage, setCurrentPage] = useState(1);
+
   useEffect(() => {
     dispatch(fetchProduct());
   }, [dispatch]);
 
+  const filteredProducts = useMemo(() => {
+    if (!searchQuery.trim()) {
+      return product.product;
+    }
+
+    return product.product.filter((item) => {
+      const searchText = `${item.title} ${
+        item.description || ""
+      }`.toLowerCase();
+      return searchText.includes(searchQuery.toLowerCase().trim());
+    });
+  }, [product.product, searchQuery]);
+
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [searchQuery]);
+
   const pageSize = 8;
   const startIndex = (currentPage - 1) * pageSize;
-  const currentItems = product.product.slice(startIndex, startIndex + pageSize);
-  const totalPages = Math.ceil(product.product.length / pageSize);
+  const currentItems = filteredProducts.slice(
+    startIndex,
+    startIndex + pageSize
+  );
+  const totalPages = Math.ceil(filteredProducts.length / pageSize);
+
+  const handleAddToCart = (item) => {
+    dispatch(
+      addCart({
+        id: item.id,
+        title: item.title,
+        price: item.price,
+        img: item.img,
+        description: item.description,
+      })
+    );
+  };
 
   return (
     <div>
+      {searchQuery && (
+        <div className="mt-6 mb-4 text-center">
+          <p className="text-gray-600">
+            Found {filteredProducts.length} result
+            {filteredProducts.length !== 1 ? "s" : ""} for "{searchQuery}"
+          </p>
+        </div>
+      )}
+
       <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mt-6 border rounded">
         {currentItems.length > 0 ? (
           currentItems?.map((item) => (
@@ -35,27 +76,29 @@ const Card = () => {
               </Link>
               <p className="font-semibold">{item.title}</p>
               <p className="text-gray-600 font-mono">₹{item.price}</p>
-              <div className="flex items-center justify-between  ">
+              <div className="flex items-center justify-between">
                 <Button
                   label="Add to Cart"
                   className="border rounded p-2"
-                  // onClick={() =>
-                    // dispatch(addCart({ ...product, quantity: 1, message:"from card"}))
-                  // }
+                  onClick={() => handleAddToCart(item)}
                 />
                 <div className="flex gap-4 pr-2">
                   <Link to={`/editproduct/${item.id}`}>
                     <i className="fa-solid fa-pen-to-square"></i>
                   </Link>
                   <Link to={`/deleteproduct/${item.id}`}>
-                    <i className="fa-solid fa-trash" ></i>
+                    <i className="fa-solid fa-trash"></i>
                   </Link>
                 </div>
               </div>
             </div>
           ))
         ) : (
-          <p>No products found</p>
+          <p className="col-span-full text-center py-8 text-gray-500">
+            {searchQuery
+              ? `No products found for "${searchQuery}"`
+              : "No products found"}
+          </p>
         )}
       </div>
 

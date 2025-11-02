@@ -6,7 +6,6 @@ import CardDetails from "../common/ui/CardDetails";
 import Error from "../common/ui/Error";
 import Cart from "../components/Cart";
 import DeleteProduct from "../components/DeleteProduct";
-import ConfirmModal from "../common/ui/ConfirmModal";
 
 export const router = createBrowserRouter([
   {

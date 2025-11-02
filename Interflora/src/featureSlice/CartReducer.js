@@ -51,7 +51,7 @@ export const removeCartItem = createAsyncThunk(
 );
 
 export const clearCartAsync = createAsyncThunk(
-  "cart/clearCartAsync",
+  "cart/clearCart",
   async () => {
     const { data: existingItems } = await api.get("/");
 
@@ -102,7 +102,6 @@ const cartSlice = createSlice({
         if (existingIndex !== -1) {
           state.cart[existingIndex] = incoming;
         } else {
-          // Add new item
           state.cart.push(incoming);
         }
       })
