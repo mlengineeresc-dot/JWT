@@ -1,0 +1,130 @@
+{
+  "users": [
+    {
+      "id": "6311c0af-5578-4e24-8c85-cbf72952ddcc",
+      "name": "muhammad",
+      "email": "muhammad@gmail.com",
+      "password": "asdf12",
+      "role": "user"
+    },
+    {
+      "id": "48e7b44c-8050-49dd-90de-0a0e9a05ff56",
+      "name": "suriya",
+      "email": "suriya@gmail.com",
+      "password": "asdf12",
+      "role": "user"
+    },
+    {
+      "id": "4cf80aa1-8ee0-4359-8050-992cdbaffb64",
+      "name": "asma",
+      "email": "asma@gmail.com",
+      "password": "asdf",
+      "role": "user"
+    }
+  ],
+  "products": [
+    {
+      "id": "1",
+      "name": "Book",
+      "price": 100,
+      "description": "Long note book",
+      "currency": "INR"
+    },
+    {
+      "id": "2",
+      "name": "Pen",
+      "price": 20,
+      "description": "Blue Pen",
+      "currency": "INR"
+    }
+  ],
+  "orders": [
+    {
+      "id": "146297d2-426a-4efa-aaa8-9679da341d86",
+      "productId": "1",
+      "amount": 2900,
+      "status": "success",
+      "paymentId": "pay_RoDOS1h7NYiK2Z",
+      "createdAt": "2025-12-06T05:45:28.574Z"
+    },
+    {
+      "id": "196bdb7d-36f2-4cde-9856-a83e479c52b8",
+      "userId": "6311c0af-5578-4e24-8c85-cbf72952ddcc",
+      "productId": "1",
+      "amount": 2900,
+      "status": "success",
+      "paymentId": "pay_RoDorUpv99IuAr",
+      "createdAt": "2025-12-06T06:10:28.570Z"
+    },
+    {
+      "id": "86382a71-ddbc-4d74-ae9f-d032ee16230a",
+      "userId": "6311c0af-5578-4e24-8c85-cbf72952ddcc",
+      "productId": "1",
+      "amount": 2900,
+      "status": "success",
+      "paymentId": "pay_RoEJBIHRkmaDMS",
+      "createdAt": "2025-12-06T06:39:43.847Z"
+    },
+    {
+      "id": "16e05924-1be9-4b4a-a909-450981fbdf32",
+      "productId": "1",
+      "amount": 2900,
+      "status": "success",
+      "paymentId": "pay_RoElAkz8rpAdSk",
+      "createdAt": "2025-12-06T07:05:42.833Z"
+    },
+    {
+      "id": "9e87b6e5-79d1-4664-ab48-cb6dfa690905",
+      "productId": "2",
+      "amount": 999,
+      "status": "success",
+      "paymentId": "pay_RoEmeLjR27By6x",
+      "createdAt": "2025-12-06T07:07:02.092Z"
+    },
+    {
+      "id": "f9dbcb1b-8bb0-4fc0-922d-91a0dd550f76",
+      "userId": "48e7b44c-8050-49dd-90de-0a0e9a05ff56",
+      "productId": "1",
+      "amount": 2900,
+      "status": "success",
+      "paymentId": "pay_RoGnBjBsEz5qXp",
+      "createdAt": "2025-12-06T09:04:57.041Z"
+    },
+    {
+      "id": "20a00426-7be5-487c-b3b0-9ba53202a0b1",
+      "userId": "48e7b44c-8050-49dd-90de-0a0e9a05ff56",
+      "productId": "1",
+      "amount": 2900,
+      "status": "success",
+      "paymentId": "pay_RozKGVh4EYLhhG",
+      "createdAt": "2025-12-08T04:38:45.046Z"
+    },
+    {
+      "id": "cf58f823-7dd8-401c-a188-29590c8c3a1f",
+      "userId": "4cf80aa1-8ee0-4359-8050-992cdbaffb64",
+      "productId": "1",
+      "amount": 2900,
+      "status": "success",
+      "paymentId": "pay_Rp0bTDSWeo6Bbu",
+      "createdAt": "2025-12-08T05:53:44.192Z"
+    },
+    {
+      "id": "9cc17a1b-b9f4-4b85-8192-acac13eda05c",
+      "userId": "6311c0af-5578-4e24-8c85-cbf72952ddcc",
+      "productId": "1",
+      "amount": 100,
+      "status": "success",
+      "paymentId": "pay_Rp17KuxJUeeeSJ",
+      "createdAt": "2025-12-08T06:23:54.019Z"
+    },
+    {
+      "id": "51c67a87-ba67-4c7b-9636-a7f7cec67d4d",
+      "userId": "48e7b44c-8050-49dd-90de-0a0e9a05ff56",
+      "productId": "1",
+      "amount": 100,
+      "status": "success",
+      "paymentId": "pay_Rp1vFJSgwkvzRl",
+      "createdAt": "2025-12-08T07:11:09.074Z"
+    }
+  ]
+}
