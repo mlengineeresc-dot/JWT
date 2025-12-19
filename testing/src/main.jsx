@@ -7,7 +7,7 @@ import ConditionalRendering from "./Day1/ConditionalRendering.jsx";
 import FormInput from "./Day2/FormInput.jsx";
 import LoginForm from "./Day2/LoginForm.jsx";
 import FetchUsers from "./Day2/FetchUsers.jsx";
-
+import UsersPage from "./Day2_Scalable_ui/features/users/pages/UsersPage.jsx";
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     {/* <App /> */}
@@ -20,5 +20,6 @@ createRoot(document.getElementById("root")).render(
     <LoginForm />
     {/* <ConditionalRendering /> */}
     <FetchUsers />
+    <UsersPage />
   </StrictMode>
 );
