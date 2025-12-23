@@ -1,0 +1,38 @@
+// Sending data from child to parent without using props or callback
+
+
+import React,{useState,useRef,forwardRef,useImperativeHandle} from 'react'
+
+const Child=forwardRef((_,ref)=>{
+  
+  const hello=()=>{
+    console.log("hello")
+  }
+  
+  const bye=()=>{
+    console.log("bye")
+  }
+  
+  useImperativeHandle(ref,()=>{
+  return  {hello,bye}
+  })
+  
+  return <p>Child Component</p>
+})
+
+
+const Parent=()=>{
+  
+const refval=useRef();
+
+return(
+  <>
+  <Child ref={refval} />
+  <button onClick={()=>refval.current.hello()}> call hello </button>
+    <button onClick={()=>refval.current.bye()}> call bye </button>
+
+  </>
+  )
+}
+
+export default Parent
