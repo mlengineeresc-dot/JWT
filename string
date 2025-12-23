@@ -1,0 +1,50 @@
+//question 1
+
+// ["ab", "cbbc", "bnc"]
+const input = "abzcbbczbncz";
+
+const result = [];
+let current = "";
+
+for (let char of input) {
+  if (char === "z") {
+    if (current.length > 0) {
+      result.push(current);
+      current = "";
+    }
+  } else {
+    current += char;
+  }
+}
+
+
+if (current.length > 0) {
+  result.push(current);
+}
+
+console.log(result); 
+
+
+
+//question 2
+
+//reverse string
+
+function reverseString(str) {
+  const arr = str.split("");   // convert to array
+  let left = 0;
+  let right = arr.length - 1;
+
+  while (left < right) {
+
+    [arr[left], arr[right]] = [arr[right], arr[left]];
+
+    left++;
+    right--;
+  }
+
+  return arr.join("");
+}
+
+console.log(reverseString("hello"));
+
