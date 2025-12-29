@@ -1,0 +1,25 @@
+import React, { useState, useCallback, memo } from "react";
+
+const Child = memo(({ onClick }) => {
+  console.log("Child rendered");
+  return <button onClick={onClick}>Click Me</button>;
+});
+
+function Parent() {
+  const [count, setCount] = useState(0);
+  const [text, setText] = useState("");
+
+  const increment = useCallback(() => {
+    setCount((c) => c + 1);
+  }, []);
+
+  return (
+    <div>
+      <h1>Count: {count}</h1>
+      <Child onClick={increment} />
+      <input value={text} onChange={(e) => setText(e.target.value)} />
+    </div>
+  );
+}
+
+export default Parent;
