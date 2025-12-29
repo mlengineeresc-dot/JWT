@@ -1,0 +1,28 @@
+import React,{useState,useMemo} from 'react'
+
+
+function Parent(){
+  
+  const[count,setCount]=useState(0)
+  const[text,setText]=useState("")
+  console.log("rendering")
+  
+  function calculate(num){
+    console.log("recalculating")
+    for(let i=0;i<1e7;i++){
+    return  num=num+1000
+    }
+  }
+  
+  const memoizedCount=useMemo(()=>calculate(count),[count])
+  console.log(memoizedCount,"value")
+  return (
+    
+    <>
+      <p> Memoized value:{memoizedCount}</p>
+      <button onClick={()=>setCount(count+1)}>Increment</button>
+      <input type='text' onChange={(e)=>setText(e.target.value)} />
+    </>
+    )
+}
+export default Parent
