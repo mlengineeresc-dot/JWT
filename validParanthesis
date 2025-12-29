@@ -1,0 +1,13 @@
+function isValid(str){
+    const stack={"]":"[","}":"{",")":"("}
+    const temp=[];
+    for (let char of str){
+        if(stack[char]){
+            let top=temp.pop();
+            if(top !== stack[char]) return false
+        }else temp.push(char)
+    }return temp.length===0 
+}
+
+const res=isValid("[{]}")
+console.log(res)
