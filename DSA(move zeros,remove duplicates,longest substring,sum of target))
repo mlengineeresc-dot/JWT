@@ -1,0 +1,53 @@
+//move zeros at end
+const arr=[1,2,0,4,0,0,3,0,5,8] 
+
+let index=0;
+for(let i=0;i<arr.length;i++){
+    if(arr[i]!==0){
+        console.log("arr[i] here",arr[i])
+        arr[index]=arr[i]
+        console.log("after swapping",arr[index])
+        index++;
+    }
+}
+
+for (let i=index;i<arr.length;i++){
+    arr[i]=0;
+}
+
+console.log(arr)
+
+
+//remove duplicates from sorted array
+
+let arr=[1,1,2,2,3,3,3,4,4]
+
+let index=1;
+for (let i=1;i<arr.length ;i++){
+    if(arr[i]!==arr[i-1]){
+        arr[index]=arr[i]
+        index++
+    }
+}
+
+console.log(arr.slice(0,index))
+
+//Longest substring without repeating characters
+
+
+let str="abcdabcbdb"
+for(let i=0;i<str.length;i++){
+    let set=new Set()
+    for(let j=i;j<str.length;j++){
+        if(set.has(str[j])){
+            break;
+        }
+        else {
+        set.add(str[j])
+        console.log(set)
+        }
+    }
+    return console.log(set)
+}
+
+
