@@ -1,0 +1,92 @@
+// move zeros
+//let arr=[2,0,3,0,0,0,7,6,3,4,7]
+
+// let index=0;
+
+// for(let i=0;i<arr.length ;i++){
+//     if(arr[i]!==0){
+//         arr[index]=arr[i]
+//         index++
+        
+//     }
+// }
+
+// for(let i=index;i<arr.length;i++){
+//     arr[i]=0
+// }
+// console.log(arr)
+
+
+// remove duplicates
+// const arr=[1,1,2,3,3,4,4,5,5]
+// let index=1
+// for(let i=1;i<arr.length;i++){
+//     if(arr[i]!==arr[i-1]){
+//         arr[index]=arr[i]
+//         index++
+//     }
+// }
+// console.log(index)
+// console.log(arr.slice(0,index))
+
+//second largest
+// const arr=[34,32,67,43,87,32]
+
+// let max=-Infinity
+// let second=-Infinity
+// for(let i=0;i<arr.length;i++){
+//     if(arr[i]>max){
+//         second=max
+//         max=arr[i]
+//     }
+//     else if(second<arr[i] && arr[i]!==max){
+//         second=arr[i]
+//     }
+// }
+
+// console.log(second)
+
+//unique values 
+
+// const arr=[2,3,4,2,4,1,56,76,43,3,99,76]
+
+
+// console.log([... new Set(arr)])
+
+// for(let i=1;i<arr.length;i++){
+//     if(arr[i]<arr[i-1]) arr[i]=arr[i-1]
+// }
+// console.log(arr)
+
+// console.log(arr.filter((e,i,arr)=>arr.indexOf(e)===i))
+
+// console.log(arr.reduce((a,b,i,arr)=>{
+//     if(arr.indexOf(b)===i){
+//       a.push(b) 
+//     } 
+//     return a
+    
+// },[]))
+
+//no of ocurrences
+
+const str="abbcdabcsd"
+let count={}
+for(let char of str){
+    count[char]=(count[char]||0)+1
+}
+console.log(count)
+
+let map=new Map()
+for(let char of str){
+    map.set(char,(map.get(char)||0)+1)
+    // map.set(char, (map.get(char) || 0) + 1);
+}
+console.log(map)
+//first non repeating character
+
+
+
+
+
+
