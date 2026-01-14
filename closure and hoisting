@@ -1,0 +1,30 @@
+//example 1
+let foo;
+function outer() {
+      let count = 0;
+      foo = function () {
+       return ++count;
+      };
+}
+outer(); 
+console.log(foo()); 
+console.log(foo());
+outer(); 
+console.log(foo()); 
+//example 2
+let count = 0;
+function test(fn = () => ++count)
+{
+return fn();
+}
+console.log(test());
+console.log(test());
+//example 3
+function hoist(){
+    console.log(a)
+    var a=10;
+    console.log(a)
+}
+hoist()
+var a=20
+console.log(a)
