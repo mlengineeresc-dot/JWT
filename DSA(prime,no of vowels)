@@ -20,3 +20,18 @@ function nextPrime(n){
     
 }
 console.log(nextPrime(4))
+
+
+//Count vowels in substring
+
+function vowelsInSubstring(str,start,end){
+    let vowels="aeiou"
+    let subString=str.substring(start,end)
+    let count=0;
+    
+    for(let char of subString){
+        if(vowels.includes(char)) count++
+    }
+    return count
+}
+console.log(vowelsInSubstring("javascript",4,10))
